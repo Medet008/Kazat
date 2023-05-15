@@ -1,0 +1,41 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json", // Схема JSON файла launchSettings
+  "iisSettings": { // Настройки IIS
+    "windowsAuthentication": false, // Отключить аутентификацию Windows
+    "anonymousAuthentication": true, // Включить анонимную аутентификацию
+    "iisExpress": { // Настройки IIS Express
+      "applicationUrl": "http://localhost:15316", // URL приложения
+      "sslPort": 44365 // SSL порт
+    }
+  },
+  "profiles": { // Профили приложения
+    "http": { // Профиль http
+      "commandName": "Project", // Название команды
+      "dotnetRunMessages": true, // Отображение сообщений при запуске dotnet run
+      "launchBrowser": true, // Запустить браузер при старте
+      "launchUrl": "swagger", // URL для запуска приложения
+      "applicationUrl": "http://localhost:5265", // URL приложения
+      "environmentVariables": { // Переменные окружения
+        "ASPNETCORE_ENVIRONMENT": "Development" // Окружение приложения
+      }
+    },
+    "https": { // Профиль https
+      "commandName": "Project", // Название команды
+      "dotnetRunMessages": true, // Отображение сообщений при запуске dotnet run
+      "launchBrowser": true, // Запустить браузер при старте
+      "launchUrl": "swagger", // URL для запуска приложения
+      "applicationUrl": "https://localhost:7162;http://localhost:5265", // URL приложения
+      "environmentVariables": { // Переменные окружения
+        "ASPNETCORE_ENVIRONMENT": "Development" // Окружение приложения
+      }
+    },
+    "IIS Express": { // Профиль IIS Express
+      "commandName": "IISExpress", // Название команды
+      "launchBrowser": true, // Запустить браузер при старте
+      "launchUrl": "swagger", // URL для запуска приложения
+      "environmentVariables": { // Переменные окружения
+        "ASPNETCORE_ENVIRONMENT": "Development" // Окружение приложения
+      }
+    }
+  }
+}
