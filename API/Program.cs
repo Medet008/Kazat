@@ -1,4 +1,4 @@
-using API.Data;
+using Api.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,10 +6,10 @@ var builder = WebApplication.CreateBuilder(args);  // Создаем экземпляр приложен
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDbContext"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultDbConnection"));
 });
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 // Add services to the container.
 builder.Services.AddControllers();  // Добавляем контроллеры в контейнер зависимостей
 
